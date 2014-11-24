@@ -48,7 +48,7 @@ define('VERBOSE_SIMPLE', 1); // means only output simple report
 define('VERBOSE_REPORT', 2); // means output a detail report
 define('VERBOSE_DEBUG',  3); // means output detail report as well as debug info.
 
-require_once(_PATH_BMH . 'phpmailer-bmh_rules.php');
+require_once(__DIR__ . '/' . 'phpmailer-bmh_rules.php');
 
 class BounceMailHandler {
 
