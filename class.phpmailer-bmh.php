@@ -462,7 +462,7 @@ class BounceMailHandler {
    */
   function processBounce($pos,$type,$totalFetched) {
     $header      = imap_header($this->_mailbox_link,$pos);
-    $subject     = strip_tags($header->subject);
+    $subject     = (isset($header->subject))?strip_tags($header->subject):'[NO SUBJECT]';
     $body        = '';
     $header_full = imap_fetchheader($this->_mailbox_link,$pos);
     $body_full   = imap_body($this->_mailbox_link,$pos);
